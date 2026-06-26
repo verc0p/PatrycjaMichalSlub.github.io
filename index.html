@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Patrycja & Michał | Wedding Page</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav>
+  <a href="#details">Szczegóły</a>
+  <a href="#schedule">Plan</a>
+  <a href="#location">Lokalizacja</a>
+  <a href="#location">Galeria</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <img src="assets/img/mountains.png" alt="mountains" class="img_hero"/>
+    <h1>Patrycja & Michał</h1>
+    <p>4 • Lipca • 2026</p>
+
+    <div class="countdown">
+      <div class="count"><div id="d">0</div>Dni</div>
+      <div class="count"><div id="h">0</div>Godz</div>
+      <div class="count"><div id="m">0</div>Min</div>
+      <div class="count"><div id="s">0</div>Sek</div>
+    </div>
+  </div>
+
+  <div class="scroll" style="animation: fadeIn 1.5s ease-in-out 0.5s forwards; opacity: 0;">Skroluj, aby odkryć</div>
+</div>
+
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<!-- STORY -->
+<section class="split reveal slub" id="slub">
+  <div>
+    <h2>Ślub</h2>
+    <p style="display:flex; align-items:center; gap:10px; justify-content:flex-start;">
+      <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/marker.png" alt="marker"/>
+      Sanktuarium Matki Bożej Leśniowskiej
+    </p>
+    <p style="margin-top: 45px;">
+      Ślub odbędzie się <strong>4 lipca 2026 roku</strong> o godzinie <strong>15:00</strong> w Sanktuarium Matki Bożej Leśniowskiej.
+    </p>
+    <button class="location_btn"><a href="https://maps.app.goo.gl/nnEpCQuW6b4gqJKZ9" style="text-decoration:none; color:inherit;">Zobacz na mapie</a></button>
+  </div>
+
+  <div class="img" style="background-image:url('/assets/img/sanktuarium.jpg')"></div>
+  
+</section>
+
+<section class="split reveal wesele" id="wesele">
+  <div class="img" style="background-image:url('/assets/img/sala.jpg')"></div>
+
+  <div>
+    <h2>Wesele</h2>
+    <p style="display:flex; align-items:center; gap:10px; justify-content:flex-end;">
+      Sala weselna Brzozowy Gaj
+      <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/marker.png" alt="marker"/>
+    </p>
+
+    <p style="margin-top: 45px;">
+      Po ceremonii zapraszamy na przyjęcie weselne, które odbędzie się w sali weselnej Brzozowy Gaj. Czeka na Was niezapomniana zabawa, pyszne jedzenie i wspaniała atmosfera.
+    </p>
+
+    <button class="location_btn"><a href="https://maps.app.goo.gl/2SEeEU3ug6muLfij9" style="text-decoration:none; color:inherit;">Zobacz na mapie</a></button>
+  </div>
+  
+</section>
+
+<section class="center reveal galeria" id="galeria">
+  <h2>Galeria</h2>
+  <p>
+    Zapraszamy do obejrzenia zdjęć z naszego ślubu i wesele!
+  </p>
+  <div class="centerbtn">
+    <div class="galeria_btn"><img src="https://img.icons8.com/ios/50/google-photos.png" alt="google-photos"/><a href="https://photos.app.goo.gl/GLEhgnBTvd8hn5k77" style="text-decoration:none; color:inherit;">Zobacz galerię</a></div>
+  </div>
+</section>
+
+<footer>
+  Patrycja & Michał © 2026
+</footer>
+
+<script src="assets/scripts/main.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+</body>
+</html>
