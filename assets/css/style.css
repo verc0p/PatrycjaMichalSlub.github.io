@@ -101,7 +101,6 @@ img.img_hero{
   color:var(--Cacoa);
   border-radius:14px;
   min-width:80px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.05);
 }
 
 #d, #h, #m, #s{
