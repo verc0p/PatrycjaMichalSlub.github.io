@@ -229,19 +229,19 @@ p{
 }
 
 /* MAP */
-#map{
-  height:450px;
-  width:100%;
-  border-radius:18px;
-  margin-top:20px;
-  box-shadow:0 40px 80px rgba(0,0,0,0.08);
+#map {
+  width: 100%;
+  height: 400px;
+  border: none;
+  border-radius: 12px;
+  margin-top: 45px;
 }
 
 /* reveal */
 .reveal{
   opacity:0;
   transform:translateY(60px);
-  transition:1.2s cubic-bezier(.2,.8,.2,1);
+  transition:3s cubic-bezier(.2,.8,.2,1);
 }
 
 .reveal.show{
@@ -262,6 +262,21 @@ p{
   color:var(--Espresso);
 }
 
+.bus {
+  padding:50px 20%;
+}
+
+#bus::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--Khaki);
+  width: 45%;
+  height: 2px;
+}
+
 .location_btn,
 .galeria_btn {
   background: 0;
@@ -272,12 +287,15 @@ p{
   cursor: pointer;
   align-items: center;
   margin-top: 35px;
+  transition: 0.3s all ease-in-out;
 }
 
-.location_btn:hover {
+.location_btn:hover,
+.galeria_btn:hover {
   background: var(--Cacoa);
   color: var(--Linen);
-  transition: 0.3s;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 footer {
@@ -307,6 +325,8 @@ footer {
   display: flex;
   justify-content: center;
 }
+
+
 
 /* ============================================
    MOBILE RESPONSIVE OPTIMIZATION
