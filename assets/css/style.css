@@ -10,10 +10,6 @@
 
 *{margin:0;padding:0;box-sizing:border-box;}
 
-html{
-  scroll-behavior:smooth;
-}
-
 body{
   font-family:Inter;
   background:var(--Linen);
@@ -76,13 +72,24 @@ font-weight: 400;
   margin-top:10px;
 }
 
+.hero_content {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeIn 1.5s ease-in-out forwards;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
 img.img_hero{
-    opacity: 0.8;
-    width:25%;
-    position:absolute;
-    top:30%;
-    left:50%;
-    transform:translate(-50%, -50%);
+  position:absolute;
+  top:0%;
+  left:50%;
+  opacity:0.8;
+  width:60%;
+  transform:translate(-50%, -60%);
+  margin-bottom: 20px;
 }
 
 /* countdown glass */
@@ -290,6 +297,16 @@ p{
   transition: 0.3s all ease-in-out;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .location_btn:hover,
+  .galeria_btn:hover {
+    background: var(--Cacoa);
+    color: var(--Linen);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
 .location_btn:hover,
 .galeria_btn:hover {
   background: var(--Cacoa);
@@ -326,6 +343,32 @@ footer {
   justify-content: center;
 }
 
+/* Transport */
+.transport_route_info {
+  margin: 20px auto;
+  padding: 10px 20px;
+  border: 1px solid var(--Cacoa);
+  font-size: 14px;
+  color: var(--Espresso);
+  text-align: center;
+  width: fit-content;
+}
+
+#weather-widget {
+  position: fixed;
+  z-index: 1001;
+  top: 5%;
+  right: 2%;
+  text-align: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
+  border: 1px solid var(--Cacoa);
+  color: var(--Espresso);
+  font-size: 14px;
+  backdrop-filter: blur(8px);
+}
 
 
 /* ============================================
@@ -354,7 +397,7 @@ footer {
 
   /* Hero section mobile */
   .hero {
-    height: 80vh;
+    height: 90vh;
     border-width: 8px;
     padding: 40px 20px 80px 20px;
   }
@@ -369,8 +412,8 @@ footer {
   }
 
   img.img_hero {
-    width: 50%;
-    top: 25%;
+    width: 15%;
+    top: 0;
   }
 
   /* Countdown mobile */
@@ -509,6 +552,14 @@ footer {
   .event::before {
     left: -27px;
   }
+
+  #weather-widget {
+    top: 10%;
+    right: 50%;
+    transform: translateX(50%);
+    padding: 6px 10px;
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -604,5 +655,10 @@ footer {
   footer {
     padding: 20px 15px;
     font-size: 11px;
+  }
+
+  .transport_route_info {
+    font-size: 12px;
+    padding: 8px 16px;
   }
 }

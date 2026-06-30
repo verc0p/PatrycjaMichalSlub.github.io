@@ -14,19 +14,24 @@
 
 <body>
 
+
+<div id="weather-widget">
+  🌡️ <span id="temp">Ładuję widget pogodowy...</span>°C
+</div>
+
 <nav>
   <a href="#slub">Ślub</a>
   <a href="#wesele">Wesele</a>
-  <a href="#bus">Transport - Radzionków</a>
+  <a href="#transport">Transport</a>
   <a href="#galeria">Galeria</a>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
-  <div>
+  <div class="hero_content">
     <img src="assets/img/mountains.png" alt="mountains" class="img_hero"/>
     <h1>Patrycja & Michał</h1>
-    <p>4 • Lipca • 2026</p>
+    <p>4 • Lipca • 2026 • 14:00</p>
 
     <div class="countdown">
       <div class="count"><div id="d">0</div>Dni</div>
@@ -89,10 +94,13 @@
   
 </section>
 
-<section class="center reveal bus" id="bus">
-  <h2>Transport - Radzionków</h2>
+<section class="center reveal bus" id="transport">
+  <h2>Transport</h2>
+  <div class="transport_route_info">
+      Radzionków → Żarki → Sanktuarium Matki Bożej Leśniowskiej → Brzozowy Gaj
+  </div>
   <p>
-    Dla gości z Radzionkowa i okolic przygotowaliśmy transport na nasz ślub i wesele. <br><br>Autobus będzie odjeżdżał z Radzionkowa o godzinie <strong>12:00</strong> spod <strong>Centrum Kultury Karolinka</strong> (plac Jana Pawła II 2, Radzionków). Prosimy o punktualność, aby wszyscy mogli dotrzeć na czas. <br><br><strong>Samochód można zostawić na parkingu przy Karolince. Po weselu autobus odwiezie gości z powrotem do Radzionkowa.</strong>
+    Dla gości przygotowaliśmy transport na nasz ślub i wesele. <br><br>Autobus będzie odjeżdżał z Radzionkowa o godzinie <strong>12:00</strong> spod <strong>Centrum Kultury Karolinka</strong> (plac Jana Pawła II 2, Radzionków). Prosimy o punktualność, aby wszyscy mogli dotrzeć na czas. <br><br><strong>Samochód można zostawić na parkingu przy Karolince. Po weselu autobus odwiezie gości z powrotem do Radzionkowa.</strong>
   </p>
 <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1500!2d18.903042770826307!3d50.402397312920336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47112b6c0f22f003%3A0x6ed4a134df2c0bf6!2zQ2VudHJ1bSBLdWx0dXJ5IOKAnkthcm9saW5rYeKAnQ!5e1!3m2!1spl!2spl!4v1782651607943!5m2!1spl!2spl&z=10" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 </section>
@@ -113,6 +121,20 @@
 
 <script src="assets/scripts/main.js"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
+
+<script>
+const lenis = new Lenis({
+  duration: 2.0,
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+</script>
 
 </body>
 </html>
