@@ -554,7 +554,7 @@ footer {
   }
 
   #weather-widget {
-    top: 10%;
+    top: 3%;
     right: 50%;
     transform: translateX(50%);
     padding: 6px 10px;
@@ -577,7 +577,7 @@ footer {
   }
 
   .hero {
-    height: 70vh;
+    height: 80vh;
     border-width: 6px;
     padding: 30px 15px 70px 15px;
   }
@@ -660,5 +660,13 @@ footer {
   .transport_route_info {
     font-size: 12px;
     padding: 8px 16px;
+  }
+
+  #weather-widget {
+    top: 3%;
+    right: 50%;
+    transform: translateX(50%);
+    padding: 6px 10px;
+    font-size: 12px;
   }
 }
